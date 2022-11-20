@@ -16,8 +16,11 @@ pipeline {
                 steps {
                     
                     echo "this is Build stagse"
+                    sh '''
+                    cd /home/java/java-workspace/workspace/java deploy
                     
-                    sh 'mvn clean install'
+                    mvn clean install
+                    '''
                 }
             
         }
