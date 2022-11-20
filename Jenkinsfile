@@ -5,21 +5,9 @@ pipeline {
     }
     
         stages {
-           
-            stage ('clone'){
-                parallel {
-                    stage ('clone1'){
-                        steps {
-                        sh " this is parallel"
-                        }
-                    }
-                    stage ('clone2'){
-                        steps {
-                            sh " this is parallel 2" 
-                           
-                        }
-                    }
-                        
+        
+             stage ('clone1'){
+                  
                 steps {
                     echo "this is clone stage"
                     
