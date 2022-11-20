@@ -27,10 +27,10 @@ pipeline {
             stage ('Deploy'){
                
                 steps {
-                    
-                    echo "this is Deploy stagse"
+                      
                     sh '''
-                    scp /home/java/java-workspace/workspace/java_deploy ubuntu@172.31.36.186:/opt/tomcat/webapps/java_deploy_hello_world_war
+                    scp /home/java/java-workspace/workspace/java_deploy ubuntu@172.31.36.186:/opt/tomcat/webapps/java_deploy
+                    echo "this is Deploy stagse"
                     
                     '''
                 }
