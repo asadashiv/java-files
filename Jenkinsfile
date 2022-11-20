@@ -9,11 +9,11 @@ pipeline {
             }
             stage ('Build'){
                 tools {
-                maven MAVEN_HOME
+               def MVN_HOME=tool name: 'maven', type: 'maven'
                 step {
                     
                     echo "this is Build stage"
-                    sh 'mvn clean install'
+                    sh "${MVN_HOME}/bin package"
                 }
             }
         }
