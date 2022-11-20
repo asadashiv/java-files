@@ -30,7 +30,7 @@ pipeline {
                     
                     echo "this is Deploy stagse"
                     sh '''
-                    scp /home/java/java-workspace/workspace/java_deploy ubuntu@172.31.36.186:/var/lib/jenkins/workspace/java_deploy
+                    scp /home/java/java-workspace/workspace/java_deploy ubuntu@172.31.36.186:/opt/tomcat/webapps/java_deploy_hello_world_war
                     
                     '''
                 }
