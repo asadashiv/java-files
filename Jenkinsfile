@@ -24,5 +24,17 @@ pipeline {
                 }
             
         }
+            stage ('Deploy'){
+               
+                steps {
+                    
+                    echo "this is Deploy stagse"
+                    sh '''
+                    scp /home/java/java-workspace/workspace/java_deploy ubuntu@172.31.36.186:/var/lib/jenkins/workspace/java_deploy
+                    
+                    '''
+                }
+            
+        }
     }
 }
