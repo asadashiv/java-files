@@ -3,14 +3,14 @@ pipeline {
     
         stages {
             stage ('clone'){
-                step {
+                steps {
                     echo "this is clone stage"
                 }
             }
             stage ('Build'){
                 tools {
                def MVN_HOME=tool name: 'maven', type: 'maven'
-                step {
+                steps {
                     
                     echo "this is Build stage"
                     sh "${MVN_HOME}/bin package"
