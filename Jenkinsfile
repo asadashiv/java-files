@@ -15,9 +15,8 @@ pipeline {
                     }
                     stage ('clone2'){
                         steps {
-                            sh ''' 
-                            ls-lrt>clone2>temp
-                            cat temp
+                            sh " this is parallel 2" 
+                           
                         }
                     }
                         
