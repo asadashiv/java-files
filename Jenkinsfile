@@ -10,10 +10,11 @@ pipeline {
                 }
             }   
                 stage ('Build'){
-                steps {
+                    steps {
                     echo "this is Build stage"
                     'mvn clean install'
-                       
+                    }
+                }     
         }
     }
 }
