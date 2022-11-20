@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'java7'}
+    agent any
     tools {
     maven 'maven'
     }
@@ -19,7 +19,7 @@ pipeline {
                     
                     echo "this is Build stagse"
                     sh '''
-                    cd /home/java/java-workspace/workspace/java_deploy
+                    cd /var/lib/jenkins/jobs/java_deploy
                     
                     mvn clean install
                     '''
