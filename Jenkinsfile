@@ -13,7 +13,7 @@ pipeline {
                 }
                 steps {
                     
-                    echo "this is Build stage"
+                    echo "this is Build stagse"
                     sh "${MVN_HOME}/bin package"
                 }
             
