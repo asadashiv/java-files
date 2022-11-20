@@ -1,7 +1,6 @@
 pipeline {
     agent {label 'java7'}
-    tools {
-        maven MAVEN_HOME
+    
         stages {
             stage ('clone'){
                 step {
@@ -9,7 +8,10 @@ pipeline {
                 }
             }
             stage ('Build'){
+                tools {
+                maven MAVEN_HOME
                 step {
+                    
                     echo "this is Build stage"
                     sh 'mvn clean install'
                 }
