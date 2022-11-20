@@ -29,7 +29,7 @@ pipeline {
                 steps {
                       
                     sh '''
-                    scp /home/java/java-workspace/workspace/java_deploy ubuntu@172.31.36.186:/opt/tomcat/webapps/java_deploy
+                    scp -i /home/java/java-workspace/workspace/java_deploy java_deploy ubuntu@172.31.36.186:/opt/tomcat/webapps/java_deploy
                     echo "this is Deploy stagse"
                     
                     '''
