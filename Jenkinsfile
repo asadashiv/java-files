@@ -1,7 +1,7 @@
 pipeline {
     agent {label 'java7'}
     tools {
-        maven /usr/share/maven
+        maven MAVEN_HOME
         stages {
             stage ('clone'){
                 step {
