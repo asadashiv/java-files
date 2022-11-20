@@ -1,20 +1,19 @@
 pipeline {
-    agent {label 'java'}
+    agent {label 'java7'}
     tools {
         maven MAVEN_HOME
-        stages{
+        stages {
             stage ('clone'){
-                steps {
+                step {
                     echo "this is clone stage"
-           
                 }
-            }   
-                stage ('Build'){
-                    steps {
+            }
+            stage ('Build'){
+                step {
                     echo "this is Build stage"
-                    'mvn clean install'
-                    }
-                }     
+                    mvn clean install
+                }
+            }
         }
     }
 }
