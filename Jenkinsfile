@@ -19,7 +19,7 @@ pipeline {
                     
                     echo "this is Build stagse"
                     sh '''
-                    cd /home/java/java-workspace/workspace/java_deploy
+                    cd /var/lib/jenkins/workspace/java_deploy
                     
                     mvn clean install
                     '''
