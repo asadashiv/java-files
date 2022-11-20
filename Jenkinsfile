@@ -8,8 +8,8 @@ pipeline {
                 }
             }
             stage ('Build'){
-                tools {
-               def MVN_HOME=tool name: 'maven', type: 'maven'
+                environment {
+                    PATH= MVN_HOME=tool name: 'maven', type: 'maven'
                 }
                 steps {
                     
