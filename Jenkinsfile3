@@ -10,7 +10,7 @@ mvn clean install
 }
 post {
 success {
-archiveArtifacts artifacts: '*war*', followSymlinks: false
+archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
 }
 }
 
