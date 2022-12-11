@@ -13,5 +13,11 @@ mvn clean install
 
 }
 }
+stage ('Deploy'){
+steps{
+scp -r /home/jenkins/workspace/workspace/java_build/target/hello-world-war-1.0.0 ubutnu@172.31.38.248:/opt/tomcat/webapps
+
+}
+}
 }
 }
