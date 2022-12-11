@@ -11,7 +11,7 @@ mvn clean install
 }
 stage ('copy'){
 steps {
-sh 'sudo scp -r /var/lib/jenkins/workspace/java2/target/hello-world-war-1.0.0 ubuntu@172.31.4.173:/home/ubuntu/'
+sh 'scp -r /var/lib/jenkins/workspace/java2/target/hello-world-war-1.0.0 ubuntu@172.31.4.173:/home/ubuntu/'
 }
 }
 }
