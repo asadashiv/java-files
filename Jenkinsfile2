@@ -8,6 +8,11 @@ cd /var/lib/jenkins/workspace/java2
 mvn clean install
 '''
 }
+post {
+success{
+archiveArtifacts artifacts: '*.war', followSymlinks: false
+}
+}
 }
 stage ('copy'){
 steps {
