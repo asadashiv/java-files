@@ -20,7 +20,7 @@ sh 'scp -r /home/jenkins/workspace/workspace/java_build/target/hello-world-war-1
 }
 }
 }
-tage ('test'){
+stage ('test'){
 steps{
 sh 'echo "hi guys"'
 }
