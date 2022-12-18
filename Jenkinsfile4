@@ -1,8 +1,4 @@
 pipeline{
-environment {
-GIT_BRANCH ='branch2'
-}
-
 agent {label 'master'}
 stages{
 stage ('build'){
