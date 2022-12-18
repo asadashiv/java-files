@@ -15,7 +15,7 @@ mvn clean install
 
 stage ('deploy'){
 when {
-  branch ${env.'branch2'}
+  branch "${env.'branch2'}"
 }
 steps {
 echo "this is deploy stage"
