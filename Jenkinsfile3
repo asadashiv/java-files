@@ -1,0 +1,21 @@
+pipeline{
+agent {label 'master'}
+stages{
+stage ('build'){
+steps {
+sh '''
+cd /var/lib/jenkins/workspace/java3
+mvn clean install
+'''
+}
+post {
+success {
+archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+}
+}
+
+}
+
+}
+
+}
