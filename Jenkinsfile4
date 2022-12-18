@@ -1,5 +1,8 @@
 pipeline{
 agent {label 'master'}
+environment {
+GIT_BRANCH='branch2'
+}
 stages{
 stage ('build'){
 steps {
@@ -12,7 +15,7 @@ mvn clean install
 
 stage ('deploy'){
 when {
-  branch 'slave_java'
+  branch ${env.'branch2'}
 }
 steps {
 echo "this is deploy stage"
