@@ -3,7 +3,7 @@ environment {
 GIT_BRANCH ='branch2'
 }
 
-agent {label 'master'}
+agent any
 stages{
 stage ('build'){
 steps {
