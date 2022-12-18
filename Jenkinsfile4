@@ -13,14 +13,12 @@ mvn clean install
 stage ('Deploy'){
 
 when {
-  expression {env.GIT_BRANCH ==~/(master|branch2)/}
+  expression {env.GIT_BRANCH == 'branch2'}
   }
 steps {
-timeout(1) {
 sh '''
  echo "this is deploy stage"
  '''
-}
 }
 }
 }
