@@ -12,7 +12,7 @@ mvn clean install
 
 stage ('deploy'){
 when {
-  branch 'branch2'
+  branch 'slave_java'
 }
 steps {
 echo "this is deploy stage"
