@@ -20,7 +20,11 @@ when {
   branch "${env.'GIT_BRANCH'}"
 }
 steps {
-echo "this is deploy stage"
+timeout(1) {
+sh '''
+ echo "this is deploy stage"
+ '''
+}
 }
 }
 }
