@@ -2,9 +2,7 @@ pipeline{
 environment {
 GIT_BRANCH ='branch2'
 }
-parameter {
-choice choices: ['1', '2'], name: 'choice'
-}
+
 agent {label 'master'}
 stages{
 stage ('build'){
@@ -16,13 +14,13 @@ mvn clean install
 }
 }
 
-stage ('choice'){
+stage ('Deploy'){
 
 when {
   branch "${env.'branch2'}"
 }
 steps {
-echo "this is deploy ${params.'choice'}stage"
+echo "this is deploy stage"
 }
 }
 }
