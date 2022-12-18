@@ -12,7 +12,7 @@ mvn clean install
 
 stage ('deploy'){
 when {
-  branch 'master'
+  branch 'branch2'
 }
 steps {
 sh 'echo "this is deploy stage"'
