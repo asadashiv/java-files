@@ -14,13 +14,8 @@ stage ('deploy'){
 when {
   branch 'branch2'
 }
-
 steps {
 sh 'echo "this is deploy stage"'
-}
-post {
-success {
-archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
 }
 }
 }
