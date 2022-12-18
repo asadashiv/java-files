@@ -16,13 +16,13 @@ mvn clean install
 }
 }
 
-stage ('deploy'){
+stage ('choice'){
 
 when {
   branch "${env.'branch2'}"
 }
 steps {
-echo "this is deploy stage"
+echo "this is deploy ${params.'choice'}stage"
 }
 }
 }
