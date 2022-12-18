@@ -18,7 +18,7 @@ archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
 
 stage ('deploy'){
 when {
-  branch 'master'
+  branch 'branch2'
 }
 
 steps {
