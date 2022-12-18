@@ -8,12 +8,6 @@ cd /var/lib/jenkins/workspace/java3
 mvn clean install
 '''
 }
-post {
-success {
-archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
-}
-}
-
 }
 
 stage ('deploy'){
@@ -24,7 +18,10 @@ when {
 steps {
 sh 'echo "this is deploy stage"'
 }
-
+post {
+success {
+archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+}
 }
 }
 }
