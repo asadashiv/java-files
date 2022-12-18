@@ -13,7 +13,7 @@ mvn clean install
 stage ('Deploy'){
 
 when {
-  expression {env.GIT_BRANCH == 'branch2'}
+  expression {env.GIT_BRANCH == 'origin/branch2'}
   }
 steps {
 sh '''
