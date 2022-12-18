@@ -17,7 +17,7 @@ mvn clean install
 stage ('Deploy'){
 
 when {
-  branch "${env.'GIT_BRANCH'}"
+  expression {env.GIT_BRANCH=='master/branch2'}
 }
 steps {
 timeout(1) {
