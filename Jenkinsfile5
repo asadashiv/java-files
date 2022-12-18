@@ -1,0 +1,25 @@
+pipeline{
+agent {label 'master'}
+stages{
+stage ('build'){
+steps {
+sh '''
+cd /var/lib/jenkins/workspace/java3
+mvn clean install
+'''
+}
+}
+
+stage ('Deploy'){
+
+when {
+  expression {env.GIT_BRANCH == 'origin/branch2/master'}
+  }
+steps {
+sh '''
+ echo "this is deploy stage"
+ '''
+}
+}
+}
+}
